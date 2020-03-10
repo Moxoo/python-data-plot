@@ -1,0 +1,51 @@
+# import matplotlib.pyplot as plt
+# import numpy as np
+# print("plot")
+#
+# data1 = np.loadtxt('fairness_dctcp/throughputA_front.plotme')
+# data2 = np.loadtxt('fairness_dctcp/throughputB_front.plotme')
+# data3 = np.loadtxt('fairness_dctcp/throughputC_front.plotme')
+# data4 = np.loadtxt('fairness_dctcp/throughputD_front.plotme')
+# data5 = np.loadtxt('fairness_dctcp/throughputE_front.plotme')
+#
+# plt.figure(dpi=400)
+# plt.plot(data1[2:, 0], data1[2:, 1]/1000, 'cornflowerblue', label="Flow 1", linewidth=1)
+# plt.plot(data2[2:, 0], data2[2:, 1]/1000, 'indianred', label="Flow 2", linewidth=1)
+# plt.plot(data3[2:, 0], data3[2:, 1]/1000, 'darkkhaki', label="Flow 3", linewidth=1)
+# plt.plot(data4[2:, 0], data4[2:, 1]/1000, 'mediumpurple', label="Flow 4", linewidth=1)
+# plt.plot(data5[2:, 0], data5[2:, 1]/1000, 'lightskyblue', label="Flow 5", linewidth=1)
+# plt.legend()
+# plt.title('DCTCP Fairness And Convergence')
+# plt.xlabel('Time (S)')
+# plt.ylabel('Throughput (Gbps)')
+# x_ticks = np.arange(0, 45.1, 5)
+# plt.xticks(x_ticks)
+# y_ticks = np.arange(0, 1.1, 0.1)
+# plt.yticks(y_ticks)
+# plt.show()
+
+import matplotlib.pyplot as plt
+import numpy as np
+print("plot")
+
+data1 = np.loadtxt('fairness_cubic/throughputA_front.plotme')
+data2 = np.loadtxt('fairness_cubic/throughputB_front.plotme')
+data3 = np.loadtxt('fairness_cubic/throughputC_front.plotme')
+data4 = np.loadtxt('fairness_cubic/throughputD_front.plotme')
+data5 = np.loadtxt('fairness_cubic/throughputE_front.plotme')
+
+plt.figure(dpi=400)
+plt.plot(data1[2:, 0], data1[2:, 1]/1000, 'cornflowerblue', label="Flow 1", linewidth=1)
+plt.plot(data2[2:, 0], data2[2:, 1]/1000, 'indianred', label="Flow 2", linewidth=1)
+plt.plot(data3[2:, 0], data3[2:, 1]/1000, 'darkkhaki', label="Flow 3", linewidth=1)
+plt.plot(data4[2:, 0], data4[2:, 1]/1000, 'mediumpurple', label="Flow 4", linewidth=1)
+plt.plot(data5[2:, 0], data5[2:, 1]/1000, 'lightskyblue', label="Flow 5", linewidth=1)
+plt.legend()
+plt.title('CUBIC Fairness And Convergence')
+plt.xlabel('Time (S)')
+plt.ylabel('Throughput (Gbps)')
+x_ticks = np.arange(0, 45.1, 5)
+plt.xticks(x_ticks)
+y_ticks = np.arange(0, 1.1, 0.1)
+plt.yticks(y_ticks)
+plt.show()
